@@ -1,0 +1,9 @@
+Buat file java dan python baru yang dapat menampilkan identitas sebagai mahasiswa UNY yang meliputi:
+1. Nama
+2. NIM
+3. Angkatan
+4. Program Studi
+5. Jurusan
+6. Fakultas
+7. IPK harapan (dalam bentuk desimal)
+
