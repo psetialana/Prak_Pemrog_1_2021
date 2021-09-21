@@ -1,0 +1,3 @@
+Buat suatu program java dan python yang dapat
+1. Membaca dua input nilai 
+2. Tampilkan hasil penjumlahan, pengurangan, perkalian, pembagian, modulus dua input tersebut
