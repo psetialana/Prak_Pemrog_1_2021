@@ -1,0 +1,34 @@
+Buatlah program yang dapat menampilkan menu berikut
+
+.: Program Siakad :.
+1. Tambah Data 
+2. Edit Data 
+3. Hapus Data 
+4. Lihat Data 
+Menu yang Anda pilih = 
+
+Jika mengetik 1 maka muncul:
+1. Tambah Data Mahasiswa
+2. Tambah Data Mata kuliah
+3. Kembali
+Menu yang Anda pilih = 
+
+    Jika mengetik 1 maka muncul:
+    Masukan nama mahasiswa =
+    Mahasiswa yang Anda tambah adalah .....
+
+    Jika mengetik 2 maka muncul:
+    Masukan nama mata kuliah =
+    Mata kuliah yang Anda tambah adalah ....
+
+    Jika mengetik 3 maka muncul:
+    Terima kasih
+
+    Jika mengetik selain 1 - 3 maka muncul:
+    Menu tidak ada
+
+Jika mengetik menu 2 - 4 maka muncul:
+Fitur belum ada
+
+Jika mengetik menu selain 1 - 4 maka muncul:
+Menu tidak ada
