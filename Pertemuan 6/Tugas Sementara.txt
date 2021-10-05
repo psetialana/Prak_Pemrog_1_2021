@@ -5,6 +5,7 @@ Buatlah program yang dapat menampilkan menu berikut
 2. Edit Data 
 3. Hapus Data 
 4. Lihat Data 
+5. Keluar
 Menu yang Anda pilih = 
 
 Jika mengetik 1 maka muncul:

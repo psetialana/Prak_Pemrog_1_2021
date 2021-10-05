@@ -1,0 +1,10 @@
+Buatlah program dengan input n 
+program tersebut akan menampilkan deret sampai maksimal nilai n 
+deretnya adalah 
+
+1
+5
+25
+125
+...
+maksimal n
