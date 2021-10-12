@@ -1,0 +1,23 @@
+Terdapat input n yang akan menampilkan 
+
+jika n = 3 (ganjil) maka
+
+***
+ * 
+***
+
+jika n = 5 (ganjil) maka
+
+*****
+ ***
+  *
+ ***
+*****
+
+jika n = 4 (genap) maka
+
+**-**
+ *-*
+  -
+ *-*
+**-**
