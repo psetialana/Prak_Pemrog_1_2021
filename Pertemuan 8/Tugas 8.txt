@@ -1,0 +1,25 @@
+Buatlah program yang dapat menyimpan data nama mahasiswa dan IPK nya sebanyak maksimal 1000 Data
+kemudian tampilkan data yang telah di input sebelumnya.
+Jika nama mahasiswa yang dimasukan adalah "exit" (tanpa tanda petik) maka perulangan untuk memasukan data akan berhenti
+kemudian program akan menampilkan data yang telah dimasukan dan menampikan rerata IPK
+Contoh
+
+Memasukan daa
+Data 1
+Nama Mahasiswa = ...
+IPK Mahasiswa = ...
+
+.
+.
+
+Data ..
+Nama Mahasiswa = ...
+IPK Mahasiswa = ...
+
+Menampikan data
+No  Nama            IPK
+----------------------------
+1   Budi            3.57
+2   Ani             3.78  
+....
+Rata-rata IPK = 3.68  
