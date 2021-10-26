@@ -1,0 +1,11 @@
+Suatu sistem informasi akademik yang dapat memanajemen data mahasiswa yang berupa 
+1. nim
+2. nama
+3. ipk
+
+dan sistem itu dapat 
+1. menambah data
+2. melihat data
+3. menghapus data
+4. mengedit data
+5. keluar 
