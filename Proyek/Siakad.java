@@ -1,10 +1,11 @@
 import java.util.Scanner;
 public class Siakad {
-    private String[] nama = new String[1000];
+    Mahasiswa[] mahasiswa = new Mahasiswa[1000];
     private double[] ipk = new double[1000];
     private int jumlahData = 0;
 
     public static void main(String[] args) {
+        
         Siakad siakad = new Siakad();
         int menu = 0;
         while (menu!=5) {
@@ -38,18 +39,25 @@ public class Siakad {
         } else {
             System.out.println("Berikut data mahasiswa");
             for (int i=0; i<jumlahData;i++) {
-                System.out.println(nama[i]+"    "+ipk[i]);
+                System.out.println(mahasiswa[i].getNIM()+"  "+mahasiswa[i].getNama()+"    "+mahasiswa[i].getIPK());
             }
         }
         
     }
 
     private void tambahData() {
+        Mahasiswa inputMahasiswa = new Mahasiswa();
         Scanner scan = new Scanner(System.in);
+        System.out.print("Masukan NIM mahasiswa = ");
+        String nim = scan.nextLine();
         System.out.print("Masukan nama mahasiswa = ");
-        nama[jumlahData] = scan.nextLine();
+        String nama = scan.nextLine();
         System.out.print("Masukan IPK mahasiswa = ");
-        ipk[jumlahData] = scan.nextDouble();
+        double ipk = scan.nextDouble();
+        inputMahasiswa.setNIM(nim);
+        inputMahasiswa.setNama(nama);
+        inputMahasiswa.setIPK(ipk);
+        mahasiswa[jumlahData] = inputMahasiswa;
         jumlahData++;
         lihatData();
     }

@@ -9,3 +9,15 @@ dan sistem itu dapat
 3. menghapus data
 4. mengedit data
 5. keluar 
+
+
+Ujian Akhir Semester
+Dilaksanakan secara sinkron dalam 1 atau 2 sesi 
+Dalam sesi sinkron tersebut akan dibuat 1 breakout room 
+Akan dipanggil sesuai presensi sekitar 5 mahasiswa untuk memasukin breakout room
+Sekitar 10 menit mahasiswa dalam breakout room tersebut akan diberikan tantangan yaitu
+menambah atau mengubah proyeknya
+kemudian setiap mahasiswa tersebut diminta presentasi singkat untuk menjalankan programnya dan 
+mungkin akan ada pertanyaan
+
+Kemungkinkan pertanyaan dan tantangan untuk setiap sesi maju (5 mahasiswa) akan berbeda-beda
