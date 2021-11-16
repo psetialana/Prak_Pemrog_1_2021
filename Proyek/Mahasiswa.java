@@ -1,7 +1,13 @@
-public class Mahasiswa {
+public class Mahasiswa extends Manusia {
     private String nim;
     private String nama;
     private double ipk;
+
+    public Mahasiswa(String nim, String nama, double ipk) {
+        this.nim = nim;
+        this.nama = nama;
+        this.ipk = ipk;
+    }
 
     public void setNIM(String nim) {
         this.nim = nim;
@@ -25,6 +31,10 @@ public class Mahasiswa {
 
     public double getIPK() {
         return this.ipk;
+    }
+
+    public void getDetail() {
+        System.out.println(this.nim+" "+this.nama+" "+this.ipk+" "+this.tinggiBadan);
     }
 
 }

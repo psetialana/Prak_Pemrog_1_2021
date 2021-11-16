@@ -1,7 +1,6 @@
 import java.util.Scanner;
 public class Siakad {
     Mahasiswa[] mahasiswa = new Mahasiswa[1000];
-    private double[] ipk = new double[1000];
     private int jumlahData = 0;
 
     public static void main(String[] args) {
@@ -15,6 +14,8 @@ public class Siakad {
             } else if (menu==2) {
                 siakad.tambahData();
             } else if (menu==3) {
+                siakad.cariData();
+            } else if (menu==4) {
                 siakad.rerataIPK();
             }
         }
@@ -25,7 +26,8 @@ public class Siakad {
         System.out.println("..Menu..");
         System.out.println("1. Lihat Data");
         System.out.println("2. Tambah Data");
-        System.out.println("3. Rerata IPK");
+        System.out.println("3. Cari Data");
+        System.out.println("4. Rerata IPK");
         System.out.println("5. Keluar");
         System.out.print("Pilih menu = ");
         int menu = scan.nextInt();
@@ -39,14 +41,13 @@ public class Siakad {
         } else {
             System.out.println("Berikut data mahasiswa");
             for (int i=0; i<jumlahData;i++) {
-                System.out.println(mahasiswa[i].getNIM()+"  "+mahasiswa[i].getNama()+"    "+mahasiswa[i].getIPK());
+                mahasiswa[i].getDetail();
             }
         }
         
     }
 
     private void tambahData() {
-        Mahasiswa inputMahasiswa = new Mahasiswa();
         Scanner scan = new Scanner(System.in);
         System.out.print("Masukan NIM mahasiswa = ");
         String nim = scan.nextLine();
@@ -54,18 +55,25 @@ public class Siakad {
         String nama = scan.nextLine();
         System.out.print("Masukan IPK mahasiswa = ");
         double ipk = scan.nextDouble();
-        inputMahasiswa.setNIM(nim);
-        inputMahasiswa.setNama(nama);
-        inputMahasiswa.setIPK(ipk);
+        System.out.print("Masukan Tinggi Badan mahasiswa = ");
+        double tinggi = scan.nextDouble();
+        Mahasiswa inputMahasiswa = new Mahasiswa(nim, nama, ipk);
+        inputMahasiswa.setTinggiBadang(tinggi);
         mahasiswa[jumlahData] = inputMahasiswa;
         jumlahData++;
         lihatData();
     }
 
+    public void cariData() {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Masukan NIM mahasiswa yang akan dicari = ");
+        String nim = scan.nextLine();
+    }
+
     public void rerataIPK() {
         double total = 0.0;
         for(int i=0; i<jumlahData; i++) {
-            total += ipk[i];
+            total += mahasiswa[i].getIPK();
         }
         double rerata = total/jumlahData;
         System.out.println("Rerata IPK Mahasiswa = "+ rerata);
