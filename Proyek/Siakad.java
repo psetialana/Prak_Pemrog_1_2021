@@ -69,11 +69,18 @@ public class Siakad {
         } catch (Exception e) {
             System.out.println("Anda harus memasukan bilangan desimal dengan menggunakan tanda titik. Silahkan edit IPK atau tinggi anda setelah input data");
         }
-        Mahasiswa inputMahasiswa = new Mahasiswa(nim, nama, ipk);
-        inputMahasiswa.setTinggiBadang(tinggi);
-        mahasiswa[jumlahData] = inputMahasiswa;
-        jumlahData++;
-        lihatData();
+        if (ipk<0) {
+            System.out.println("Nilai IPK harus sama atau diatas 0.0");
+        } else if(ipk>4) {
+            System.out.println("Nilai IPK harus sama atau diatas 4.0");
+        } else {
+            Mahasiswa inputMahasiswa = new Mahasiswa(nim, nama, ipk);
+            inputMahasiswa.setTinggiBadang(tinggi);
+            mahasiswa[jumlahData] = inputMahasiswa;
+            jumlahData++;
+            lihatData();
+        }
+        
     }
 
     public void cariDataByNIM() {
@@ -121,21 +128,33 @@ public class Siakad {
         if (index==-1) {
             System.out.println("Data yang anda akan hapus tidak ketemu");
         } else {
-            for (int i = index; i<jumlahData; i++) {
-                mahasiswa[i] = mahasiswa[i+1];
+            mahasiswa[index].getDetail();
+            System.out.print("Apakah Anda yakin ingin menghapus data tersebut? (y) = ");
+            String opsi = scan.nextLine();
+            if (opsi.equals('y')) {            
+                for (int i = index; i<jumlahData; i++) {
+                    mahasiswa[i] = mahasiswa[i+1];
+                }
+                jumlahData--;
+                lihatData();
+            } else {
+                System.out.println("Data tidak jadi dihapus");
             }
-            jumlahData--;
-            lihatData();
         }
     }
 
     public void rerataIPK() {
-        double total = 0.0;
-        for(int i=0; i<jumlahData; i++) {
-            total += mahasiswa[i].getIPK();
+        if (jumlahData==0) {
+            System.out.println("Belum ada data");
+        } else {
+            double total = 0.0;
+            for(int i=0; i<jumlahData; i++) {
+                total += mahasiswa[i].getIPK();
+            }
+            double rerata = total/jumlahData;
+            System.out.println("Rerata IPK Mahasiswa = "+ rerata);
+            System.out.println("Jumlah data mahasiswa = "+ jumlahData);
         }
-        double rerata = total/jumlahData;
-        System.out.println("Rerata IPK Mahasiswa = "+ rerata);
     }
     
 }

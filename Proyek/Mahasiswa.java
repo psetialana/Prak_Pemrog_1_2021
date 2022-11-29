@@ -33,11 +33,19 @@ public class Mahasiswa extends Manusia {
         return this.ipk;
     }
 
+    public String getPredikat() {
+        if (this.ipk>=3) {
+            return "Baik Sekali";
+        } else {
+            return "Baik";
+        }
+    }
+
     public void getDetail() {
-        System.out.printf("%10s %20s %5s %5s", "NIM", "NAMA", "IPK", "TINGGI BADAN");
+        System.out.printf("%10s %10s %5s %7s", "NIM", "NAMA", "IPK", "TINGGI");
         System.out.println();
         System.out.println("-----------------------------------------------------------------------------");
-        System.out.printf("%10s %20s %5s %5s", this.nim, this.nama.toUpperCase(), String.valueOf(this.ipk), String.valueOf(this.tinggiBadan));
+        System.out.printf("%10s %10s %5s %7s", this.nim, this.nama.toUpperCase(), String.valueOf(this.ipk), String.valueOf(this.tinggiBadan));
         System.out.println();
     }
 
